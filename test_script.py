@@ -3,7 +3,7 @@
 from cluster_std_err import ClusteredDataFrame
 import pandas as pd
 
-antismash = pd.read_csv('antismash.csv')
-antismash['std_err'] = antismash['job_stderr']
+df = pd.read_csv('bedtools_closestbed.csv')
+df['std_err'] = df['tool_stderr']
 
-ClusteredDataFrame(antismash)
+df_clustered = ClusteredDataFrame(df)
