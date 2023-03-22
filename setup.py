@@ -8,10 +8,8 @@ setup(
     install_requires=[
         'nltk',
         'scikit-learn',
-        'transformers',
         'Levenshtein',
         'numpy',
         'pandas',
-        'torch',
     ],
 )
