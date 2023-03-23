@@ -3,7 +3,7 @@
 ### Install from github (use a venv)
 
 ```python
-pip install https://github.com/TomHarrop/cluster_std_err.git
+pip install git+https://github.com/TomHarrop/cluster_std_err.git
 ```
 
 ### Basic usage
