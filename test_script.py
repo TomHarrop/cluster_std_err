@@ -4,14 +4,12 @@ from cluster_std_err import ClusteredDataFrame
 import pandas as pd
 
 df = pd.read_csv('bedtools_closestbed.csv')
-df['std_err'] = df['tool_stderr']
-
 df_clustered = ClusteredDataFrame(df)
 
-# check out some rows
-df_clustered[df_clustered['levenshtein_cluster_id'] == 3]['tool_stderr']
-
-df_clustered[df_clustered['jaccard_cluster_id'] == 3]['tool_stderr']
-
-sorted_df = df_clustered.sort_values(by='levenshtein_cluster_id')
+sorted_df = df_clustered.sort_values(by='cluster_id')
 sorted_df.to_csv('bedtools_closestbed_sorted.csv')
+
+# count and summarize the clusters
+cluster_summary = df_clustered.summarize_clusters()
+cluster_summary.to_csv('bedtools_cluster_summary.csv')
+
