@@ -1,3 +1,8 @@
+
+# This code now lives in [usegalaxy-au/tools-au](https://github.com/usegalaxy-au/tools-au)
+
+---
+
 ## Standard error clustering rough-up
 
 ### Install from github (use a venv)
